@@ -1,7 +1,8 @@
 import React from 'react';
+import logo from './logo.svg';
 import './App.css';
-import NavBar from './components/NavBar';
-import RenderButton from './components/RenderButton';
+import NavBar from './NavBar';
+import RenderButton from './RenderButton';
 
 function App() {
   return (
