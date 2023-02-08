@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Listitem from './Listitem';
 import { List } from 'antd-mobile';
 import axios, * as others from 'axios';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   const [data, setData] = useState<any[]>([])
@@ -24,7 +25,11 @@ const Index = () => {
   return (
     <List>
       {data?.map(item => {
-          return (<Listitem name={item.name} date={item.dateRegistered}/>)
+          return (
+            <Link to={`/issues/${item.id}`} style={{'color': 'black', 'textDecoration': 'none'}}>
+          <Listitem name={item.name} date={item.dateRegistered}/>
+          </Link>
+          )
         })}
     </List>
   )
